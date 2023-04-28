@@ -1,14 +1,21 @@
 html {
     --color-font-main: #000000;
+    --color-font-secondary: #ffffff;
     --color-bg-main: #ffffff;
     --color-bg-secondary: #31394d;
     --color-decoration-main: #f0544f;
     --color-decoration-secondary: #b85741;
     --color-decoration-additional: #eca400;
+
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Inter", sans-serif;
     color: var(--color-font-main);
     background-color: var(--color-bg-main);
+}
+
+section {
+    min-height: 50vh;
 }

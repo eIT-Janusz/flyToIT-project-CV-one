@@ -8,6 +8,7 @@
 
         <link href="./assets/css/normalize.css" rel="stylesheet" />
         <link href="./assets/css/main.css" rel="stylesheet" />
+        <link href="./assets/css/header.css" rel="stylesheet" />
 
         <!-- TODO: add Google/Yandex/Bing metatags -->
         <meta name="title" content="Janusz Sokolow - CV - FlyToIT project" />
@@ -30,11 +31,44 @@
 
     <body>
         <header>
-            <nav></nav>
+            <div class="header-wrapper">
+                <img
+                    src="./assets/images/hamburger.svg"
+                    alt="Показать меню"
+                    onclick="showMenu()"
+                />
+            </div>
+            <nav class="">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#education" onclick="hideMenu()"
+                            >образование</a
+                        >
+                    </li>
+                    <li class="menu-item">
+                        <a href="#about_me" onclick="hideMenu()">о мне</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#experience" onclick="hideMenu()"
+                            >опыт работы</a
+                        >
+                    </li>
+                    <li class="menu-item">
+                        <a href="#skills" onclick="hideMenu()">навыки</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
-        <main>Hello World!</main>
+        <main>
+            <section id="education">education</section>
+            <section id="about_me">about_me</section>
+            <section id="experience">experience</section>
+            <section id="skills">skills</section>
+        </main>
 
         <footer></footer>
+
+        <script src="assets/javascript/header.js"></script>
     </body>
 </html>

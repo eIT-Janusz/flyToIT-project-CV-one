@@ -1,0 +1,9 @@
+.header-wrapper {
+    min-height: 50px;
+    background-color: var(--color-bg-secondary);
+    padding-right: 35px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
