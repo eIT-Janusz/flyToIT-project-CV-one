@@ -8,7 +8,12 @@
 
         <link href="./assets/css/normalize.css" rel="stylesheet" />
         <link href="./assets/css/main.css" rel="stylesheet" />
+        <link href="./assets/css/footer.css" rel="stylesheet" />
         <link href="./assets/css/header.css" rel="stylesheet" />
+        <link href="./assets/css/banner.css" rel="stylesheet" />
+        <link href="./assets/css/education.css" rel="stylesheet" />
+        <link href="./assets/css/about.css" rel="stylesheet" />
+        <link href="./assets/css/skills.css" rel="stylesheet" />
 
         <!-- TODO: add Google/Yandex/Bing metatags -->
         <meta name="title" content="Janusz Sokolow - CV - FlyToIT project" />
@@ -16,58 +21,178 @@
             name="description"
             content="Janusz Sokolow is experiencied FE developer who loves to teach others how to write code."
         />
-        <meta
-            name="keywords"
-            content="developer programmer programist CV resume "
-        />
+        <meta name="keywords" content="developer programmer programist CV resume " />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/fav/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/fav//favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/fav//favicon-16x16.png" />
     </head>
 
     <body>
         <header>
+            <div class="header-overlay"></div>
             <div class="header-wrapper">
+                <nav class="">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#education" onclick="hideMenu()">образование</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#banner_me" onclick="hideMenu()">ОБО МНЕ</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#experience" onclick="hideMenu()">опыт работы</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#skills" onclick="hideMenu()">навыки</a>
+                        </li>
+                    </ul>
+                </nav>
                 <img
+                    class="header_expand"
                     src="./assets/images/hamburger.svg"
                     alt="Показать меню"
                     onclick="showMenu()"
                 />
             </div>
-            <nav class="">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="#education" onclick="hideMenu()"
-                            >образование</a
-                        >
-                    </li>
-                    <li class="menu-item">
-                        <a href="#about_me" onclick="hideMenu()">о мне</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#experience" onclick="hideMenu()"
-                            >опыт работы</a
-                        >
-                    </li>
-                    <li class="menu-item">
-                        <a href="#skills" onclick="hideMenu()">навыки</a>
-                    </li>
-                </ul>
-            </nav>
         </header>
-
+        <div id="banner" class="banner">
+            <div class="banner_content container">
+                <img alt="Фотография Януша Соколов" src="./assets/images/illia_big.png" />
+                <h1>
+                    <div class="small mobile-hide">Привет!</div>
+                    <div class="mobile-hide">Меня зовут</div>
+                    <div>Януш Соколов</div>
+                </h1>
+            </div>
+        </div>
         <main>
-            <section id="education">education</section>
-            <section id="about_me">about_me</section>
-            <section id="experience">experience</section>
-            <section id="skills">skills</section>
+            <section id="education" class="education">
+                <h2>образование</h2>
+                <div class="education_content">
+                    <div class="education-card">
+                        <div class="education-card-details">
+                            <div class="width-100">
+                                <div class="education-card-details-main">
+                                    <div class="color-accent text-bold education-card-details-period">2010-2014</div>
+                                    <h3>Название университета</h3>
+                                </div>
+                                <div class="level">Степень Уровень</div>
+                            </div>
+                            <div class="direction color-light">Программная инженерия</div>
+                        </div>
+                        <div class="education-card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor dolor sed massa
+                            tincidunt, id alique ad nunc maximus. Maecenas iaculis v elit vel gravida molestie.
+                            Suspendisse commo do nisi at bibendum posuere.
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-card-details">
+                            <div class="width-100">
+                                <div class="education-card-details-main">
+                                    <div class="color-accent text-bold education-card-details-period">2010-2014</div>
+                                    <h3>Название университета</h3>
+                                </div>
+                                <div class="level">Степень Уровень</div>
+                            </div>
+                            <div class="direction color-light">Программная инженерия</div>
+                        </div>
+                        <div class="education-card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor dolor sed massa
+                            tincidunt, id alique ad nunc maximus. Maecenas iaculis v elit vel gravida molestie.
+                            Suspendisse commo do nisi at bibendum posuere.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about_me" class="about no-padding">
+                <h2>ОБО МНЕ</h2>
+                <div class="about_content">
+                    <img alt="" src="./assets/images/about_me.jpg" class="mobile-hide" />
+                    <div class="about_description">
+                        <p>Я старший инженер полного стека с 7-летним богатым опытом.</p>
+                        <p>
+                            Я ответил на совместную разработку с различными командами и рекомендации многих клиентов с
+                            высочайшим качеством и скоростью и буду продолжать делать это в будущем.
+                        </p>
+                        <p>Я буду стараться изо всех сил, чтобы удовлетворить потребности клиентов.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <h2>опыт работы</h2>
+                <!-- <div class="experience_content">
+                    <img alt="" src="./assets/images/experience.jpg" />
+                    <div class="experience_description">
+                        <p>Я старший инженер полного стека с 7-летним богатым опытом.</p>
+                        <p>
+                            Я ответил на совместную разработку с различными командами и рекомендации многих клиентов с
+                            высочайшим качеством и скоростью и буду продолжать делать это в будущем.
+                        </p>
+                        <p>Я буду стараться изо всех сил, чтобы удовлетворить потребности клиентов.</p>
+                    </div>
+                </div> -->
+            </section>
+            <section id="skills">
+                <h2>навыки</h2>
+                <div class="skills-content">
+                    <div class="skills-box">
+                        <h3 class="skills-box-title">Технические</h3>
+                        <div class="skills-list">
+                            <div class="skill-skill">HTML</div>
+                            <div class="skill-level" style="--skill-level: 100%"></div>
+                            <div class="skill-skill">CSS</div>
+                            <div class="skill-level" style="--skill-level: 90%"></div>
+                            <div class="skill-skill">JavaScript</div>
+                            <div class="skill-level" style="--skill-level: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <h3 class="skills-box-title">Языка</h3>
+                        <div class="skills-list">
+                            <div class="skill-skill">Польский</div>
+                            <div class="skill-level" style="--skill-level: 100%"></div>
+                            <div class="skill-skill">Русский</div>
+                            <div class="skill-level" style="--skill-level: 95%"></div>
+                            <div class="skill-skill">Английский</div>
+                            <div class="skill-level" style="--skill-level: 80%"></div>
+                            <div class="skill-skill">Испанский</div>
+                            <div class="skill-level" style="--skill-level: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <footer></footer>
+        <footer>
+            <div class="footer_content container">
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <img alt="" src="./assets/icons/email.svg" />
+                        <a href="mailto:eit.janusz@gmail.com">eit.janusz@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <img alt="" src="./assets/icons/phone.svg" />
+                        <a href="tel:+7 930 937 13 15">+7 930 937 13 15</a>
+                    </div>
+                </div>
+                <div class="footer-social-media">
+                    <a href="#">
+                        <img alt="" src="./assets/icons/whatsapp.svg" />
+                    </a>
+                    <a href="#">
+                        <img alt="" src="./assets/icons/telegram.svg" />
+                    </a>
+                    <a href="#">
+                        <img alt="" src="./assets/icons/fb.svg" />
+                    </a>
+                </div>
+            </div>
+        </footer>
 
         <script src="assets/javascript/header.js"></script>
     </body>

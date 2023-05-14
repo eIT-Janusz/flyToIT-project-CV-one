@@ -1,0 +1,111 @@
+.education {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.education-card {
+    display: flex;
+    position: relative;
+    column-gap: 20px;
+    padding: 30px;
+    margin-bottom: 5px;
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.education-card:not(:last-of-type) {
+    margin-bottom: 75px;
+}
+
+.education-card h3 {
+    font-size: 35px;
+    margin: 5px 0 10px;
+}
+
+.education-card-details {
+    flex-basis: 40%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.education-card-description {
+    flex-basis: 60%;
+    max-width: 510px;
+    text-align: justify;
+}
+
+@media screen and (min-width: 901px) {
+    .education_content {
+        border-left: 1px solid #000000;
+        margin-left: 20px;
+        padding-left: 100px;
+        padding-bottom: 43px;
+    }
+    .education-card:before {
+        position: absolute;
+        left: -120px;
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .education-card:after {
+        position: absolute;
+        content: "";
+        display: block;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+        background-color: var(--color-bg-main);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
+        transform: scaleY(0.75) rotate(45deg);
+    }
+
+    .education-card:first-of-type:before {
+        background-color: var(--color-decoration-additional);
+    }
+    .education-card:before {
+        background-color: var(--color-decoration-secondary);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .education-card {
+        flex-direction: column;
+        padding: 12px 15px 10px;
+    }
+    .education-card-details {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .education-card-details-main {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        column-gap: 8px;
+    }
+    .education-card-details-period {
+        flex-shrink: 0;
+    }
+    .education-card-description {
+        padding: 0 5px;
+    }
+
+    .education-card h3 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0;
+    }
+
+    .level {
+        margin: 6px 0 4px;
+    }
+    .level,
+    .direction {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

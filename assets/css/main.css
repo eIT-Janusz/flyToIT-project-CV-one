@@ -1,5 +1,6 @@
 html {
     --color-font-main: #000000;
+    --color-font-light: #737373;
     --color-font-secondary: #ffffff;
     --color-bg-main: #ffffff;
     --color-bg-secondary: #31394d;
@@ -14,8 +15,76 @@ body {
     font-family: "Inter", sans-serif;
     color: var(--color-font-main);
     background-color: var(--color-bg-main);
+    font-size: 30px;
+    line-height: 1.25;
 }
 
 section {
-    min-height: 50vh;
+    padding: 0 25px;
+}
+section.no-padding {
+    padding: 0;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+h2 {
+    margin: 30px auto 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 48px;
+    width: fit-content;
+    padding: 0 21px 18px;
+    border-bottom: 4px solid black;
+}
+
+.color-light {
+    color: var(--color-font-light);
+}
+.color-accent {
+    color: var(--color-decoration-secondary);
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+    section {
+        padding: 0 5px;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 30px 0;
+        padding: 0 20px 5px 0;
+
+        border-bottom-width: 2px;
+    }
 }

@@ -1,0 +1,15 @@
+.experience {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.experience_content {
+    display: flex;
+    gap: 65px;
+}
+
+.experience_content img {
+    max-width: 400px;
+    width: 30%;
+    object-fit: cover;
+}

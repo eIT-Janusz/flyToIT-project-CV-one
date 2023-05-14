@@ -1,11 +1,14 @@
-const ACTIVE_CLASS = 'active';
+const EXPANDED_CLASS = 'expanded';
+const BODY_EXPANDED_CLASS = 'has-expanded';
 
-const navEl = document.querySelector('header nav');
+const headerEl = document.querySelector('header');
 
 function showMenu() {
-    navEl.classList.add(ACTIVE_CLASS);
+    headerEl.classList.add(EXPANDED_CLASS);
+    document.body.classList.add(BODY_EXPANDED_CLASS);
 }
 
 function hideMenu() {
-    navEl.classList.remove(ACTIVE_CLASS);
+    headerEl.classList.remove(EXPANDED_CLASS);
+    document.body.classList.remove(BODY_EXPANDED_CLASS);
 }
