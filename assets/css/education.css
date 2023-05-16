@@ -12,7 +12,7 @@
 }
 
 .education-card:not(:last-of-type) {
-    margin-bottom: 75px;
+    margin-bottom: 20px;
 }
 
 .education-card h3 {
@@ -35,40 +35,6 @@
     flex-basis: 60%;
     max-width: 510px;
     text-align: justify;
-}
-
-@media screen and (min-width: 901px) {
-    .education_content {
-        border-left: 1px solid #000000;
-        margin-left: 20px;
-        padding-left: 100px;
-        padding-bottom: 43px;
-    }
-    .education-card:before {
-        position: absolute;
-        left: -120px;
-        content: "";
-        display: block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    }
-
-    .education-card:after {
-        position: absolute;
-        content: "";
-        display: block;
-        left: -15px;
-        width: 30px;
-        height: 30px;
-        background-color: var(--color-bg-main);
-        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
-        transform: scaleY(0.75) rotate(45deg);
-    }
-
-    .education-card:before {
-        background-color: var(--decoration-color);
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -107,5 +73,46 @@
     .direction {
         font-size: 14px;
         line-height: 17px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .education-card:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .education_content {
+        border-left: 1px solid #000000;
+        margin-left: 20px;
+        padding-left: 100px;
+        padding-bottom: 43px;
+    }
+
+    .education-card:not(:last-of-type) {
+        margin-bottom: 75px;
+    }
+    .education-card:before {
+        position: absolute;
+        left: -120px;
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--decoration-color);
+    }
+
+    .education-card:after {
+        position: absolute;
+        content: "";
+        display: block;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+        background-color: var(--color-bg-main);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
+        transform: scaleY(0.75) rotate(45deg);
     }
 }
