@@ -19,11 +19,12 @@
     text-align: justify;
     padding-right: 25px;
 }
-.about_description p {
-    margin: 0;
-    text-indent: 22px;
-}
 
+@media screen and (max-width: 900px) {
+    .about_description p {
+        margin: 0;
+    }
+}
 @media screen and (min-width: 901px) {
     .about_content {
         display: flex;
