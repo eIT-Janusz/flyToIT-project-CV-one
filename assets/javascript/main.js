@@ -3,20 +3,29 @@ const deliveryClient = new Kk.createDeliveryClient({
     environmentId: "41366c09-a20f-0098-e739-83ed43abd726",
 });
 
+const userLang = navigator.language || navigator.userLanguage;
+
+const months = {
+    ru: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+};
+
 deliveryClient
     .items()
     .type("resume_page")
+    .languageParameter(userLang || "en")
     .toPromise()
     .then((response) => {
         const resumeData = response.data.items[0].elements;
 
-        // console.log({
-        //     resumeData,
-        // });
+        console.log({
+            resumeData,
+        });
         setName(resumeData);
         setEducation(resumeData);
         setAbout(resumeData);
         setContacts(resumeData);
+        setExperience(resumeData);
     })
     .catch((err) => {
         console.error({ err });
@@ -52,13 +61,13 @@ function setEducation(resumeData) {
                                 <div class="text-bold education-card-details-period">
                                     ${education.year_from.value}-${education.year_to.value}
                                 </div>
-                                <h3>${education.nazvanie_universiteta.value}</h3>
+                                <h3>${education.name.value}</h3>
                             </div>
-                            <div class="level">${education.stepen_.value}</div>
+                            <div class="level">${education.level.value}</div>
                         </div>
-                        <div class="direction color-light">${education.napravlenie.value}</div>
+                        <div class="direction color-light">${education.course.value}</div>
                     </div>
-                    <div class="education-card-description">${education.opisanie.value}</div>
+                    <div class="education-card-description">${education.description.value}</div>
                 </div>
             `;
         })
@@ -108,4 +117,8 @@ function setContacts(resumeData) {
     } else {
         facebookEl.parentElement.removeChild(facebookEl);
     }
+}
+
+function _getMonthName(number) {
+    return months[userLang][parseInt(number - 1)];
 }
