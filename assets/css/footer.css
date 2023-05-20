@@ -38,3 +38,24 @@ footer {
 .footer-social-media img {
     height: 40px;
 }
+
+@media screen and (max-width: 600px) {
+    .footer_content {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .footer-contact {
+        align-self: flex-start;
+    }
+    .footer-social-media {
+        position: absolute;
+        bottom: 42px;
+    }
+    .footer-social-media a {
+        margin-left: 19px;
+    }
+    .footer-social-media img {
+        height: 24px;
+    }
+}

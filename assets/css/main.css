@@ -9,14 +9,14 @@ html {
     --color-decoration-additional: #eca400;
 
     scroll-behavior: smooth;
+    font-size: 30px;
+    line-height: 1.25;
 }
 
 body {
     font-family: "Inter", sans-serif;
     color: var(--color-font-main);
     background-color: var(--color-bg-main);
-    font-size: 30px;
-    line-height: 1.25;
 }
 
 section {
