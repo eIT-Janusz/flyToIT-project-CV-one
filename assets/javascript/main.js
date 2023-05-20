@@ -4,6 +4,7 @@ const deliveryClient = new Kk.createDeliveryClient({
 });
 
 const userLang = navigator.language || navigator.userLanguage;
+const lang = ["ru", "en"].indexOf(userLang) >= 0 ? userLang : "ru";
 
 const months = {
     ru: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
@@ -13,7 +14,7 @@ const months = {
 deliveryClient
     .items()
     .type("resume_page")
-    .languageParameter(userLang || "en")
+    .languageParameter(lang || "en")
     .toPromise()
     .then((response) => {
         const resumeData = response.data.items[0].elements;
@@ -120,5 +121,5 @@ function setContacts(resumeData) {
 }
 
 function _getMonthName(number) {
-    return months[userLang][parseInt(number - 1)];
+    return months[lang][parseInt(number - 1)];
 }
